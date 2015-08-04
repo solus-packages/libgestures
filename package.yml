@@ -7,6 +7,8 @@ license    : BSD-3-Clause
 summary    : ChromiumOS libgestures ported to Linux
 description: |
     ChromiumOS libgestures ported to Linux
+builddeps  :
+    - pkgconfig(jsoncpp)
 clang      : no
 setup      : |
     ./apply_patches.sh
