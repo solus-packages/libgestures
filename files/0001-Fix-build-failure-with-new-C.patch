@@ -1,0 +1,26 @@
+From b4e2f7f28a9047d576c02bad2a40713840755dcd Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solus-project.com>
+Date: Sat, 24 Sep 2016 21:47:23 +0100
+Subject: [PATCH] Fix build failure with new C++
+
+Signed-off-by: Ikey Doherty <ikey@solus-project.com>
+---
+ include/gestures/include/finger_metrics.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/include/gestures/include/finger_metrics.h b/include/gestures/include/finger_metrics.h
+index 5440e19..cc99b63 100644
+--- a/include/gestures/include/finger_metrics.h
++++ b/include/gestures/include/finger_metrics.h
+@@ -9,6 +9,8 @@
+ #include "gestures/include/prop_registry.h"
+ #include "gestures/include/vector.h"
+ 
++#include <cmath>
++
+ namespace gestures {
+ 
+ static const size_t kMaxFingers = 10;
+-- 
+2.10.0
+

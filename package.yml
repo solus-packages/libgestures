@@ -1,6 +1,6 @@
 name       : libgestures
 version    : 2.0.1
-release    : 1
+release    : 2
 source     :
     - https://github.com/hugegreenbug/libgestures/archive/v2.0.1.tar.gz : 739c4e80a585e8a1b907702d8135357c6ec7f16fcc75b9e0b48fc22b0bd9a56b
 license    : BSD-3-Clause
@@ -11,6 +11,7 @@ builddeps  :
     - pkgconfig(jsoncpp)
 clang      : no
 setup      : |
+    %patch -p1 < $pkgfiles/0001-Fix-build-failure-with-new-C.patch
     ./apply_patches.sh
 build      : |
     %make
